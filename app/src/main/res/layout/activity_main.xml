@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- ===== Pantalla de ingreso ===== -->
+        <LinearLayout
+            android:id="@+id/layoutInicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <!-- Título de la pantalla de ingreso -->
+            <TextView
+                android:id="@+id/tvTituloInicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="Cajero electrónico"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <!-- Mensaje de bienvenida -->
+            <TextView
+                android:id="@+id/tvBienvenida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:text="Bienvenido. Presione Ingresar para acceder a su cuenta."
+                android:textSize="16sp" />
+
+            <!-- Botón para ingresar al cajero -->
+            <Button
+                android:id="@+id/btnIngresar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Ingresar" />
+
+        </LinearLayout>
+
+        <!-- ===== Pantalla del cajero ===== -->
+        <LinearLayout
+            android:id="@+id/layoutCajero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- Título de la aplicación -->
+            <TextView
+                android:id="@+id/tvTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="Cajero electrónico"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <!-- Etiqueta del saldo -->
+            <TextView
+                android:id="@+id/tvEtiquetaSaldo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:text="Saldo disponible"
+                android:textSize="16sp" />
+
+            <!-- Saldo actual (se actualiza desde el código) -->
+            <TextView
+                android:id="@+id/tvSaldo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="$0"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <!-- Campo para ingresar el monto -->
+            <EditText
+                android:id="@+id/etMonto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:hint="Monto de la transacción"
+                android:inputType="numberDecimal"
+                android:maxLength="12"
+                android:minHeight="48dp"
+                android:textSize="18sp" />
+
+            <!-- Botón para consignar -->
+            <Button
+                android:id="@+id/btnConsignar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Consignar" />
+
+            <!-- Botón para retirar -->
+            <Button
+                android:id="@+id/btnRetirar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Retirar" />
+
+            <!-- Botón para salir de la aplicación -->
+            <Button
+                android:id="@+id/btnSalir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Salir" />
+
+            <!-- Mensaje de resultado de la transacción -->
+            <TextView
+                android:id="@+id/tvMensaje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text=""
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
